@@ -4,6 +4,7 @@ import { ProjectGridItem } from '../components/grid-item'
 import Layout from '../components/layouts/article'
 
 import Redacted from '../images/redacted.png'
+import ChadOverflow from '../images/chad-overflow.png'
 import DDgle from '../images/ddgle.png'
 import Aome from '../images/aome.png'
 import Token from '../images/token.png'
@@ -27,17 +28,17 @@ const Projects = () => {
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <Section delay={0.1}>
             <ProjectGridItem id="fioraswap" title="FioraSwap" thumbnail={Redacted}>
-              A decentralized, multi-asset, over-the-counter, trading protocol built with NextJS, TailwindCSS, and Solidity.
+              A decentralized, multi-asset, over-the-counter trading protocol built with NextJS, TailwindCSS, and Solidity.
             </ProjectGridItem>
           </Section>
           <Section delay={0.1}>
-            <ProjectGridItem id="chadoverflow" title="ChadOverflow" thumbnail={Redacted}>
+            <ProjectGridItem id="chadoverflow" title="ChadOverflow" thumbnail={ChadOverflow}>
               A StackOverflow clone app built with NextJS, TailwindCSS, and MongoDB.
             </ProjectGridItem>
           </Section>
           <Section delay={0.2}>
             <ProjectGridItem id="gromlinkart" title="GromlinKart" thumbnail={Redacted}>
-              A web3 MarioKart clone built with NextJS, TailwindCSS and Solidity.
+              A web3 MarioKart clone built with NextJS, TailwindCSS, and Solidity.
             </ProjectGridItem>
           </Section>
           <Section delay={0.2}>

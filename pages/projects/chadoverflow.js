@@ -15,8 +15,8 @@ const Project = () => {
         <List ml={4} my={4}>
           <ListItem>
             <Meta>Website</Meta>
-            <Link href="">
-              Not live yet <ExternalLinkIcon mx="2px" />
+            <Link href="https://chad-overflow.vercel.app/">
+              https://chad-overflow.vercel.app/ <ExternalLinkIcon mx="2px" />
             </Link>
           </ListItem>
           <ListItem>
@@ -25,10 +25,10 @@ const Project = () => {
           </ListItem>
           <ListItem>
             <Meta>Stack</Meta>
-            <span>NextJS, TailwindCSS, MongoDB</span>
+            <span>NextJS, TailwindCSS, Zod, ShadCN, Clerk, MongoDB</span>
           </ListItem>
         </List>
-        <ProjectImage src="../../images/redacted.png" alt="ChadOverflow" />
+        <ProjectImage src="../../images/chad-overflow.png" alt="ChadOverflow" />
       </Container>
     </Layout>
   )

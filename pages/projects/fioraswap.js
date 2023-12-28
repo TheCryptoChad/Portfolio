@@ -11,7 +11,7 @@ const Project = () => {
         <Title>
           FioraSwap <Badge>2023</Badge>
         </Title>
-        <P>A decentralized, multi-asset, over-the-counter, trading protocol built with NextJS, TailwindCSS, and Solidity.</P>
+        <P>A decentralized, multi-asset, over-the-counter trading protocol built with NextJS, TailwindCSS, and Solidity.</P>
         <List ml={4} my={4}>
           <ListItem>
             <Meta>Website</Meta>
