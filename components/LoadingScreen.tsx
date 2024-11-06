@@ -10,7 +10,6 @@ export default function LoadingScreen() {
 
 	useEffect(() => {
 		const interval = setInterval(() => setProgress((prev) => (prev < 100 ? prev + 1 : 100)), 30);
-
 		const timeout = setTimeout(() => setShow(false), 3500);
 
 		return () => {
