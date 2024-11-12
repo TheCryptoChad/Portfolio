@@ -23,6 +23,10 @@ const files = [
 		image: 'folder',
 		items: [
 			{
+				title: 'Portfolio (Old)',
+				link: 'https://portfolio-thecryptochad.vercel.app',
+			},
+			{
 				title: 'DDgle',
 				link: 'https://d-dgle.vercel.app',
 			},
