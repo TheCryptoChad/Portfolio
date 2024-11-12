@@ -1,4 +1,4 @@
-import { Separator } from './ui/separator';
+import { Separator } from '../ui/separator';
 import DockItem from './DockItem';
 
 export default function Dock() {
@@ -9,8 +9,13 @@ export default function Dock() {
 				title='Finder'
 			/>
 
+			<DockItem
+				active
+				title='Safari'
+			/>
+
 			<Separator
-				className='mx-1 bg-slate-400'
+				className='mx-1 h-12 bg-slate-400'
 				orientation='vertical'
 			/>
 

@@ -13,7 +13,7 @@ export default function DockItem(props: Props) {
 				<TooltipTrigger className='flex size-full flex-col items-center gap-1 pt-1'>
 					<Image
 						alt={props.title}
-						className={`${props.title === 'Trash' && 'px-1'} h-4/5 flex-1`}
+						className={`${props.title === 'Trash' && 'px-1'} h-4/5 w-full flex-1 hover:brightness-50`}
 						height={40}
 						src={`/icons/${props.title.toLowerCase()}.png`}
 						width={40}

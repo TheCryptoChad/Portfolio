@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { navigationMenuTriggerStyle } from './ui/navigation-menu';
+import { navigationMenuTriggerStyle } from '../ui/navigation-menu';
 
 const options: Intl.DateTimeFormatOptions = {
 	weekday: 'short',

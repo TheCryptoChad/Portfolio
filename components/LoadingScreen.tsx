@@ -6,7 +6,7 @@ import { Progress } from '@/components/ui/progress';
 
 export default function LoadingScreen() {
 	const [progress, setProgress] = useState<number>(0);
-	const [show, setShow] = useState<boolean>(true);
+	const [show, setShow] = useState<boolean>(false);
 
 	useEffect(() => {
 		const interval = setInterval(() => setProgress((prev) => (prev < 100 ? prev + 1 : 100)), 30);

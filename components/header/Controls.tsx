@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { navigationMenuTriggerStyle } from './ui/navigation-menu';
+import { navigationMenuTriggerStyle } from '../ui/navigation-menu';
 import DateTime from './DateTime';
 
 const controls = {
