@@ -7,17 +7,19 @@ import { Dialog, DialogContent, DialogTitle, DialogTrigger } from '../ui/dialog'
 import FinderWindow from '../finder-window/FinderWindow';
 import SafariWindow from '../SafariWindow';
 
+interface FileItem {
+	title: string;
+	link?: string;
+}
+
+interface File {
+	title: string;
+	image: string;
+	link?: string;
+	items?: FileItem[];
+}
+
 const files = [
-	{
-		title: 'Bio',
-		image: 'file',
-		link: 'https://www.thecryptochad.com',
-	},
-	{
-		title: 'CV',
-		image: 'file',
-		link: 'https://drive.google.com/file/d/1Nuv_YVds6HSWTjR1oSAY1HbVDIZ4HjDm/preview',
-	},
 	{
 		title: 'Projects',
 		image: 'folder',
@@ -48,6 +50,73 @@ const files = [
 			},
 		],
 	},
+	{
+		title: 'Languages',
+		image: 'folder',
+		items: [
+			{ title: 'HTML' },
+			{ title: 'CSS' },
+			{ title: 'JavaScript' },
+			{ title: 'TypeScript' },
+			{ title: 'Solidity' },
+			{ title: 'Rust' },
+			{ title: 'Python' },
+		],
+	},
+	{
+		title: 'Frameworks',
+		image: 'folder',
+		items: [{ title: 'React' }, { title: 'Next.JS' }, { title: 'Nest.JS' }, { title: 'Hardhat.JS' }],
+	},
+	{
+		title: 'Libraries',
+		image: 'folder',
+		items: [
+			{ title: 'tRPC' },
+			{ title: 'Tanstack Query' },
+			{ title: 'Jotai' },
+			{ title: 'Zustand' },
+			{ title: 'Zod' },
+			{ title: 'TypeORM' },
+			{ title: 'Prisma ORM' },
+			{ title: 'Mongoose' },
+			{ title: 'SubSquid' },
+			{ title: 'Ethers.JS' },
+			{ title: 'WAGMI' },
+			{ title: 'Web3 Modal' },
+			{ title: 'Tailwind CSS' },
+			{ title: 'Chakra UI' },
+			{ title: 'ShadCN' },
+		],
+	},
+	{
+		title: 'Databases',
+		image: 'folder',
+		items: [{ title: 'PostgreSQL' }, { title: 'MySQL' }, { title: 'MongoDB' }],
+	},
+	{
+		title: 'Tools',
+		image: 'folder',
+		items: [
+			{ title: 'Git' },
+			{ title: 'Google Cloud' },
+			{ title: 'Vercel' },
+			{ title: 'Railway' },
+			{ title: 'Postman' },
+			{ title: 'VS Code' },
+			{ title: 'Remix IDE' },
+		],
+	},
+	{
+		title: 'Bio',
+		image: 'file',
+		link: 'https://www.thecryptochad.com',
+	},
+	{
+		title: 'CV',
+		image: 'file',
+		link: 'https://drive.google.com/file/d/1Nuv_YVds6HSWTjR1oSAY1HbVDIZ4HjDm/preview',
+	},
 ];
 
 export default function DragCanvas() {
@@ -55,7 +124,7 @@ export default function DragCanvas() {
 
 	return (
 		<motion.div
-			className='flex h-[86.65vh] w-[100vw] flex-col items-end gap-4 pr-4 pt-4'
+			className='flex h-[86.65vh] w-[100vw] flex-col flex-wrap-reverse content-start gap-4 pr-4 pt-4'
 			ref={ref}
 		>
 			{files.map((file) => {
@@ -69,7 +138,7 @@ export default function DragCanvas() {
 					>
 						<DialogTrigger asChild>
 							<motion.div
-								className='group flex flex-col items-center gap-1 pt-1'
+								className='group hover:cursor-pointer flex flex-col items-center gap-1 pt-1'
 								drag
 								dragConstraints={ref}
 								dragElastic={false}
@@ -78,9 +147,9 @@ export default function DragCanvas() {
 							>
 								<Image
 									alt='Folder'
-									className='-z-10 h-4/5 flex-1 rounded-md border-2 border-transparent p-2 group-hover:border-[#FFFFFF80] group-hover:bg-[#00000080]'
+									className='-z-10 h-[5vw] w-[5vw] rounded-md border-2 border-transparent p-2 group-hover:border-[#FFFFFF80] group-hover:bg-[#00000080]'
 									height={80}
-									src={`/icons/${file.image}.png`}
+									src={`/images/${file.image}.webp`}
 									width={80}
 									onDragStart={(e) => e.preventDefault()}
 								/>

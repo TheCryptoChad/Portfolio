@@ -37,7 +37,7 @@ export default function FinderWindowSidebar() {
 										<Image
 											alt={item}
 											height={15}
-											src={`/icons/folder.png`}
+											src='/images/folder.webp'
 											width={15}
 										/>
 									)}

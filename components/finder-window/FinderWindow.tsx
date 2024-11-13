@@ -3,7 +3,7 @@ import FinderWindowSidebar from './FinderWindowSidebar';
 import FinderWindowBody from './FinderWindowBody';
 
 type Props = {
-	items: { title: string; link: string }[];
+	items: { title: string; link?: string }[];
 	ref: React.MutableRefObject<null>;
 	setIsOpen: (isOpen: boolean) => void;
 	title: string;

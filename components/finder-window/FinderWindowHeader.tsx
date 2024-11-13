@@ -35,7 +35,7 @@ export default function FinderWindowHeader(props: Props) {
 						<Image
 							alt='Folder'
 							height={15}
-							src='/icons/folder.png'
+							src='/images/folder.webp'
 							width={15}
 						/>
 						<h2 className='text-sm font-bold'>{props.title}</h2>

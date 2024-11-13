@@ -33,7 +33,7 @@ export default function RootLayout({
 					alt='Background'
 					className='absolute left-0 top-0 -z-10 h-[100vh] w-[100vw] object-cover'
 					height={1080}
-					src='/images/background.jpg'
+					src='/images/background.webp'
 					width={1920}
 				/>
 				<Header />

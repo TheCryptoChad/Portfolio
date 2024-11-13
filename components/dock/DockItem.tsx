@@ -15,7 +15,7 @@ export default function DockItem(props: Props) {
 						alt={props.title}
 						className={`${props.title === 'Trash' && 'px-1'} h-4/5 w-full flex-1 hover:brightness-50`}
 						height={40}
-						src={`/icons/${props.title.toLowerCase()}.png`}
+						src={`/images/${props.title.toLowerCase()}.webp`}
 						width={40}
 					/>
 					<div className={`${props.active ? 'bg-slate-400' : 'bg-transparent'} h-1 w-1 rounded-full`} />
