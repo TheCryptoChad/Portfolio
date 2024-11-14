@@ -8,7 +8,7 @@ type Props = {
 
 export default function SafariWindow(props: Props) {
 	return (
-		<div className='flex h-[80vh] w-[60vw] flex-col rounded-lg border border-[#7E7673] bg-[#28241C]'>
+		<div className='flex h-[100dvh] w-[100dvw] lg:h-[80vh] lg:w-[60vw] flex-col rounded-lg border border-[#7E7673] bg-[#28241C]'>
 			<div className='flex h-[13.75%] items-center justify-between border-b border-black px-8 shadow-custom-hover'>
 				<div className='flex items-center gap-2'>
 					<div className='flex size-full items-center gap-2'>
@@ -27,19 +27,19 @@ export default function SafariWindow(props: Props) {
 							<MoveDiagonal2 className='size-2 text-[#00000080]' />
 						</div>
 					</div>
-					<div className='flex items-center gap-1'>
+					<div className='flex items-center gap-1 max-lg:hidden'>
 						<ChevronLeft className='h-6 w-6 cursor-pointer rounded-md bg-transparent transition-colors hover:bg-accent/50' />
 						<ChevronRight className='h-6 w-6 cursor-pointer rounded-md bg-transparent transition-colors hover:bg-accent/50' />
 					</div>
 				</div>
 
 				<Input
-					className='h-8 w-1/3 border-[#FFFFFF80] bg-[#28241C] text-center shadow-custom-hover'
+					className='h-8 w-3/4 lg:w-1/3 border-[#FFFFFF80] bg-[#28241C] text-center shadow-custom-hover'
 					readOnly
 					value={props.link}
 				/>
 
-				<div className='flex items-center gap-2'>
+				<div className='flex items-center gap-2 max-lg:hidden'>
 					<Plus className='h-6 w-6 cursor-pointer rounded-md bg-transparent transition-colors hover:bg-accent/50' />
 					<Download className='h-6 w-6 cursor-pointer rounded-md bg-transparent transition-colors hover:bg-accent/50' />
 				</div>

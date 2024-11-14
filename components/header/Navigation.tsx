@@ -23,7 +23,7 @@ export default function Navigation() {
 					</NavigationMenuTrigger>
 				</NavigationMenuItem>
 				{navigationButtons.map((button: string) => (
-					<NavigationMenuItem key={button}>
+					<NavigationMenuItem key={button} className='max-lg:hidden'>
 						<NavigationMenuTrigger className={button === 'Finder' ? 'font-extrabold' : ''}>
 							{button}
 						</NavigationMenuTrigger>

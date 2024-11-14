@@ -18,7 +18,7 @@ export default function Controls() {
 				<Image
 					key={name}
 					alt={name}
-					className={navigationMenuTriggerStyle() + ' cursor-pointer py-1.5'}
+					className={navigationMenuTriggerStyle() + ' cursor-pointer max-lg:hidden py-1.5'}
 					height={20}
 					src={src}
 					width={20}

@@ -11,7 +11,7 @@ type Props = {
 
 export default function FinderWindow(props: Props) {
 	return (
-		<div className='flex h-[40vh] w-[30vw] flex-col rounded-lg border border-[#7E7673]'>
+		<div className='flex size-full lg:h-[40vh] lg:w-[30vw] flex-col rounded-lg border border-[#7E7673]'>
 			<FinderWindowHeader
 				setIsOpen={props.setIsOpen}
 				title={props.title}

@@ -3,7 +3,7 @@ import DragCanvas from '@/components/drag-n-drop/DragCanvas';
 
 export default function Home() {
 	return (
-		<main className='flex h-[96vh] w-[100vw] justify-end'>
+		<main className='flex size-full justify-end'>
 			<LoadingScreen />
 
 			<DragCanvas />

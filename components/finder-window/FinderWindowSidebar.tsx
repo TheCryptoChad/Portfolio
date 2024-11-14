@@ -12,7 +12,7 @@ const sidebarItems = {
 
 export default function FinderWindowSidebar() {
 	return (
-		<ScrollArea className='flex h-full w-[30%] flex-col rounded-bl-lg bg-transparent pl-2 pr-1 backdrop-blur-3xl'>
+		<ScrollArea className='flex h-full w-[35%] lg:w-[30%] flex-col rounded-bl-lg bg-transparent pl-2 pr-1 backdrop-blur-3xl'>
 			{Object.entries(sidebarItems).map(([label, items]) => (
 				<Collapsible
 					key={label}
@@ -20,9 +20,9 @@ export default function FinderWindowSidebar() {
 					defaultOpen
 				>
 					<div className='w-full pl-2 pr-1'>
-						<CollapsibleTrigger className='flex w-full items-center justify-between text-xs font-medium text-[#746866]'>
+						<CollapsibleTrigger className='flex w-full items-center justify-between text-xs font-extrabold text-white'>
 							{label}
-							<ChevronDown className='ml-auto -rotate-90 text-transparent transition-all group-hover:text-[#746866] group-data-[state=open]/collapsible:rotate-0' />
+							<ChevronDown className='ml-auto -rotate-90 text-transparent transition-all group-hover:text-white group-data-[state=open]/collapsible:rotate-0' />
 						</CollapsibleTrigger>
 
 						<CollapsibleContent>

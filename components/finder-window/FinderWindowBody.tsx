@@ -12,8 +12,8 @@ type Props = {
 
 export default function FinderWindowBody(props: Props) {
 	return (
-		<ScrollArea className='h-full w-[70%]'>
-			<div className='grid size-full grid-flow-col grid-rows-2 gap-x-3 rounded-br-lg border-l border-l-black bg-[#28241C] p-5'>
+		<ScrollArea className='h-full w-[65%] lg:w-[70%]'>
+			<div className='grid size-full grid-flow-col grid-rows-2 gap-3 rounded-br-lg border-l border-l-black bg-[#28241C] p-5'>
 				{props.items.map((item) => {
 					const [isOpen, setIsOpen] = useState(false);
 					return (
@@ -25,12 +25,12 @@ export default function FinderWindowBody(props: Props) {
 							<DialogTrigger asChild>
 								<div
 									key={item.title}
-									className={`${item.link && 'hover:cursor-pointer'} group flex size-full flex-col items-center gap-1`}
+									className={`${item.link && 'hover:cursor-pointer'} group flex size-full flex-col justify-center items-center gap-1`}
 									onDoubleClick={() => setIsOpen(true)}
 								>
 									<Image
 										alt={item.title}
-										className='h-[5vw] w-[5vw] rounded-md p-2 group-hover:bg-[#FFFFFF50]'
+										className='size-[20vw] lg:size-[5vw] rounded-md p-2 group-hover:bg-[#FFFFFF50]'
 										height={60}
 										onDragStart={(e) => e.preventDefault()}
 										src={
