@@ -45,7 +45,7 @@ export const metadata: Metadata = {
 		],
 	},
 	twitter: {
-		card: 'summary_large_image',
+		card: 'summary',
 		site: '@TheCryptoChad_',
 		title: 'TheCryptoChad - Portfolio Website',
 		description: 'Welcome to TheCryptoChad Portfolio Website. Explore projects, CV, and more about TheCryptoChad.',
