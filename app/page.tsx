@@ -1,12 +1,12 @@
-import LoadingScreen from '@/components/LoadingScreen';
-import DragCanvas from '@/components/drag-n-drop/DragCanvas';
+import LoadingScreen from '@/components/loading-screen/LoadingScreen';
+import DragNDropCanvas from '@/components/drag-n-drop/DragNDropCanvas';
 
-export default function Home() {
+export default function Home(): JSX.Element {
 	return (
 		<main className='flex size-full justify-end'>
 			<LoadingScreen />
 
-			<DragCanvas />
+			<DragNDropCanvas />
 		</main>
 	);
 }

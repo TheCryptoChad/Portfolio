@@ -4,13 +4,13 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { Progress } from '@/components/ui/progress';
 
-export default function LoadingScreen() {
+export default function LoadingScreen(): JSX.Element {
 	const [progress, setProgress] = useState<number>(0);
-	const [show, setShow] = useState<boolean>(false);
+	const [show, setShow] = useState<boolean>(true);
 
 	useEffect(() => {
-		const interval = setInterval(() => setProgress((prev) => (prev < 100 ? prev + 1 : 100)), 30);
-		const timeout = setTimeout(() => setShow(false), 3500);
+		const interval: NodeJS.Timeout = setInterval(() => setProgress((prev: number) => (prev < 100 ? prev + 1 : 100)), 30);
+		const timeout: NodeJS.Timeout = setTimeout(() => setShow(false), 3500);
 
 		return () => {
 			clearInterval(interval);
@@ -20,7 +20,7 @@ export default function LoadingScreen() {
 
 	return (
 		<div
-			className={`${!show && 'hidden'} absolute left-0 top-0 z-50 flex h-[100vh] w-[100vw] flex-col items-center justify-around bg-black text-white`}
+			className={`${!show && 'hidden'} absolute left-0 top-0 z-50 flex size-full flex-col items-center justify-around bg-black text-white`}
 		>
 			<Image
 				alt='Logo'
@@ -28,6 +28,7 @@ export default function LoadingScreen() {
 				src='/logo.svg'
 				width={200}
 			/>
+
 			<Progress
 				className='w-1/4'
 				value={progress}

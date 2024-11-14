@@ -9,9 +9,9 @@ type Props = {
 	title: string;
 };
 
-export default function FinderWindow(props: Props) {
+export default function FinderWindow(props: Props): JSX.Element {
 	return (
-		<div className='flex size-full lg:h-[40vh] lg:w-[30vw] flex-col rounded-lg border border-[#7E7673]'>
+		<div className='flex size-full flex-col rounded-lg border border-[#7E7673] lg:h-[40vh] lg:w-[30vw]'>
 			<FinderWindowHeader
 				setIsOpen={props.setIsOpen}
 				title={props.title}

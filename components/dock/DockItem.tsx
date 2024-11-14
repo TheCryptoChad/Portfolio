@@ -6,7 +6,7 @@ type Props = {
 	active?: boolean;
 };
 
-export default function DockItem(props: Props) {
+export default function DockItem(props: Props): JSX.Element {
 	return (
 		<Popover>
 			<PopoverTrigger className='flex size-full flex-col items-center gap-1 pt-1'>
@@ -17,9 +17,11 @@ export default function DockItem(props: Props) {
 					src={`/images/${props.title.toLowerCase()}.webp`}
 					width={40}
 				/>
+
 				<div className={`${props.active ? 'bg-slate-400' : 'bg-transparent'} h-1 w-1 rounded-full`} />
 			</PopoverTrigger>
-			<PopoverContent className='mb-2 flex justify-center items-center w-full h-full py-1 border-black bg-[#00000080] text-white backdrop-blur-xl'>
+
+			<PopoverContent className='mb-2 flex h-full w-full items-center justify-center border-black bg-[#00000080] py-1 text-white backdrop-blur-xl'>
 				{props.title}
 			</PopoverContent>
 		</Popover>

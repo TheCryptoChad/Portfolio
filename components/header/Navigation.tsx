@@ -1,14 +1,8 @@
 import Image from 'next/image';
-import {
-	NavigationMenu,
-	NavigationMenuItem,
-	NavigationMenuList,
-	NavigationMenuTrigger,
-} from '@/components/ui/navigation-menu';
+import { NavigationMenu, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger } from '@/components/ui/navigation-menu';
+import { navigationButtons } from '@/lib/constants';
 
-const navigationButtons: string[] = ['Finder', 'Edit', 'View', 'Go', 'Window', 'Help'];
-
-export default function Navigation() {
+export default function Navigation():JSX.Element {
 	return (
 		<NavigationMenu>
 			<NavigationMenuList>
@@ -22,11 +16,13 @@ export default function Navigation() {
 						/>
 					</NavigationMenuTrigger>
 				</NavigationMenuItem>
+
 				{navigationButtons.map((button: string) => (
-					<NavigationMenuItem key={button} className='max-lg:hidden'>
-						<NavigationMenuTrigger className={button === 'Finder' ? 'font-extrabold' : ''}>
-							{button}
-						</NavigationMenuTrigger>
+					<NavigationMenuItem
+						key={button}
+						className='max-lg:hidden'
+					>
+						<NavigationMenuTrigger className={button === 'Finder' ? 'font-extrabold' : ''}>{button}</NavigationMenuTrigger>
 					</NavigationMenuItem>
 				))}
 			</NavigationMenuList>

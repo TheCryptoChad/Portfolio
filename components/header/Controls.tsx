@@ -1,26 +1,18 @@
 import Image from 'next/image';
 import { navigationMenuTriggerStyle } from '../ui/navigation-menu';
 import DateTime from './DateTime';
+import { controls, ControlsValue } from '@/lib/constants';
 
-const controls = {
-	Sound: '/icons/sound.svg',
-	Bluetooth: '/icons/bluetooth.svg',
-	Battery: '/icons/battery.svg',
-	Wifi: '/icons/wifi.svg',
-	Search: '/icons/search.svg',
-	'Control Center': '/icons/control-center.svg',
-} as const;
-
-export default function Controls() {
+export default function Controls(): JSX.Element {
 	return (
 		<div className='flex flex-1 list-none items-center justify-end'>
-			{Object.entries(controls).map(([name, src]) => (
+			{Object.entries(controls).map(([key, value]: [string, ControlsValue]) => (
 				<Image
-					key={name}
-					alt={name}
-					className={navigationMenuTriggerStyle() + ' cursor-pointer max-lg:hidden py-1.5'}
+					key={key}
+					alt={key}
+					className={`${navigationMenuTriggerStyle()} cursor-pointer py-1.5 max-lg:hidden`}
 					height={20}
-					src={src}
+					src={value}
 					width={20}
 				/>
 			))}
