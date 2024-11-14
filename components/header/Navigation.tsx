@@ -1,8 +1,17 @@
 import Image from 'next/image';
-import { NavigationMenu, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger } from '@/components/ui/navigation-menu';
+import {
+	NavigationMenu,
+	NavigationMenuContent,
+	NavigationMenuItem,
+	NavigationMenuList,
+	NavigationMenuTrigger,
+	navigationMenuTriggerStyle,
+} from '@/components/ui/navigation-menu';
+import { Button } from '../ui/button';
+import AboutMe from './AboutMe';
 import { navigationButtons } from '@/lib/constants';
 
-export default function Navigation():JSX.Element {
+export default function Navigation(): JSX.Element {
 	return (
 		<NavigationMenu>
 			<NavigationMenuList>
@@ -15,6 +24,10 @@ export default function Navigation():JSX.Element {
 							width={20}
 						/>
 					</NavigationMenuTrigger>
+
+					<NavigationMenuContent className='z-50 lg:min-w-[20vw]'>
+						<AboutMe />
+					</NavigationMenuContent>
 				</NavigationMenuItem>
 
 				{navigationButtons.map((button: string) => (
@@ -22,7 +35,7 @@ export default function Navigation():JSX.Element {
 						key={button}
 						className='max-lg:hidden'
 					>
-						<NavigationMenuTrigger className={button === 'Finder' ? 'font-extrabold' : ''}>{button}</NavigationMenuTrigger>
+						<Button className={`${button === 'Finder' && 'font-extrabold'} ${navigationMenuTriggerStyle()}`}>{button}</Button>
 					</NavigationMenuItem>
 				))}
 			</NavigationMenuList>

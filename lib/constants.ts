@@ -1,5 +1,21 @@
 export const navigationButtons: string[] = ['Finder', 'Edit', 'View', 'Go', 'Window', 'Help'];
 
+export const aboutMe = {
+	Experience: '4+ years',
+	Location: 'Panama City, PA',
+	Interests: 'Crypto, Japan & Cats',
+} as const;
+
+export type AboutMeValue = (typeof aboutMe)[keyof typeof aboutMe];
+
+export const socials = {
+	LinkedIn: 'https://www.linkedin.com/in/aelneser/',
+	GitHub: 'https://github.com/TheCryptoChad',
+	Twitter: 'https://twitter.com/TheCryptoChad_',
+} as const;
+
+export type SocialsValue = (typeof socials)[keyof typeof socials];
+
 export const controls = {
 	Sound: '/icons/sound.svg',
 	Bluetooth: '/icons/bluetooth.svg',
