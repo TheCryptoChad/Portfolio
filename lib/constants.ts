@@ -9,7 +9,7 @@ export const aboutMe = {
 export type AboutMeValue = (typeof aboutMe)[keyof typeof aboutMe];
 
 export const socials = {
-	LinkedIn: 'https://www.linkedin.com/in/aelneser/',
+	LinkedIn: 'https://www.linkedin.com/in/adham-elneser/',
 	GitHub: 'https://github.com/TheCryptoChad',
 	Twitter: 'https://twitter.com/TheCryptoChad_',
 } as const;
