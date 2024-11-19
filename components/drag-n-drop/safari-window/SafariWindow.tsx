@@ -1,6 +1,7 @@
 'use client';
 
-import { ChevronLeft, ChevronRight, Download, Minus, MoveDiagonal2, Plus, X } from 'lucide-react';
+import { useState } from 'react';
+import { ChevronLeft, ChevronRight, Download, Minus, MonitorSmartphone, MoveDiagonal2, Plus, X } from 'lucide-react';
 import { Input } from '../../ui/input';
 
 type Props = {
@@ -9,8 +10,12 @@ type Props = {
 };
 
 export default function SafariWindow(props: Props): JSX.Element {
+	const [mobilePreview, setMobilePreview] = useState<boolean>(false);
+
 	return (
-		<div className='flex h-[100dvh] w-[100dvw] flex-col rounded-lg border border-[#7E7673] bg-[#28241C] lg:h-[100vh]'>
+		<div
+			className={`${mobilePreview ? 'w-[30vw]' : 'w-[100dvw]'} flex h-[100dvh] flex-col rounded-lg border border-[#7E7673] bg-[#28241C] lg:h-[100vh]`}
+		>
 			<div className='flex h-[10%] items-center justify-between border-b border-black px-8 shadow-custom-hover'>
 				<div className='flex items-center gap-2'>
 					<div className='flex size-full items-center gap-2'>
@@ -37,11 +42,18 @@ export default function SafariWindow(props: Props): JSX.Element {
 					</div>
 				</div>
 
-				<Input
-					className='h-8 w-3/4 border-[#FFFFFF80] bg-[#28241C] text-center shadow-custom-hover lg:w-1/3'
-					readOnly
-					value={props.link}
-				/>
+				<div className='flex w-5/6 items-center justify-center gap-4 lg:w-3/4'>
+					<Input
+						className='h-8 w-5/6 border-[#FFFFFF80] bg-[#28241C] text-center shadow-custom-hover lg:w-2/5'
+						readOnly
+						value={props.link}
+					/>
+
+					<MonitorSmartphone
+						className='h-6 w-6 cursor-pointer rounded-md bg-transparent transition-colors hover:bg-accent/50 max-lg:hidden'
+						onClick={() => setMobilePreview(!mobilePreview)}
+					/>
+				</div>
 
 				<div className='flex items-center gap-2 max-lg:hidden'>
 					<Plus className='h-6 w-6 cursor-pointer rounded-md bg-transparent transition-colors hover:bg-accent/50' />

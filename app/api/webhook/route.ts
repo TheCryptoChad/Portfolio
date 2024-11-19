@@ -7,7 +7,7 @@ export const POST = async (req: Request) => {
 	try {
 		switch (req.method) {
 			case 'POST':
-				console.log(req.headers.get('host'));
+				//console.log(req.headers.get('host'));
 				//if (req.headers.get('host') !== 34.199.138.158) throw new Error('Unauthorized Call');
 
 				const body = await req.json();
