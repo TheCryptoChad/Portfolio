@@ -7,9 +7,8 @@ export const POST = async (req: Request) => {
 	try {
 		switch (req.method) {
 			case 'POST':
-				console.log(req.url)
 				const body = await req.json();
-				//console.log(body);
+				console.log(body);
 
 				// if (!body.type || !body.currency || !body.exchange)
 				// 	throw new Error(`Missing required fields: ${body.alert} - ${body.message}`);
