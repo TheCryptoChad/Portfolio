@@ -7,16 +7,21 @@ export const POST = async (req: Request) => {
 	try {
 		switch (req.method) {
 			case 'POST':
+				console.log(req.headers.get('host'));
+				//if (req.headers.get('host') !== 34.199.138.158) throw new Error('Unauthorized Call');
+
 				const body = await req.json();
 				console.log(body);
+				
+				if (!body.type || !body.currency || !body.exchange)
+					throw new Error(`Missing required fields: ${body.alert} - ${body.message}`);
 
-				// if (!body.type || !body.currency || !body.exchange)
-				// 	throw new Error(`Missing required fields: ${body.alert} - ${body.message}`);
+				const token = body?.token_address ?? (await getTokenAddress(body.currency));
+				console.log('Token Address:', token);
 
-				// const token = body?.token_address ?? (await getTokenAddress(body.currency));
-				// console.log('Token Address:', token);
+				if (token.startsWith('0x')) throw new Error('Ethereum Token Detected');
 
-				// await buyToken(token);
+				await buyToken(token);
 
 				return NextResponse.json({ message: 'Success' }, { status: 200 });
 			default:
