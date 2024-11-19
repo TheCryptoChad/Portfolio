@@ -34,6 +34,7 @@ export const metadata: Metadata = {
 		title: 'TheCryptoChad - Portfolio Website',
 		description: 'Welcome to TheCryptoChad Portfolio Website. Explore projects, CV, and more about TheCryptoChad.',
 		url: 'https://www.thecryptochad.com',
+		siteName: 'TheCryptoChad Portfolio Website',
 		type: 'website',
 		images: [
 			{

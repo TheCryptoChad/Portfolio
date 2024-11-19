@@ -10,8 +10,8 @@ type Props = {
 
 export default function SafariWindow(props: Props): JSX.Element {
 	return (
-		<div className='flex h-[100dvh] w-[100dvw] flex-col rounded-lg border border-[#7E7673] bg-[#28241C] lg:h-[80vh] lg:w-[60vw]'>
-			<div className='flex h-[13.75%] items-center justify-between border-b border-black px-8 shadow-custom-hover'>
+		<div className='flex h-[100dvh] w-[100dvw] flex-col rounded-lg border border-[#7E7673] bg-[#28241C] lg:h-[100vh]'>
+			<div className='flex h-[10%] items-center justify-between border-b border-black px-8 shadow-custom-hover'>
 				<div className='flex items-center gap-2'>
 					<div className='flex size-full items-center gap-2'>
 						<div
@@ -53,7 +53,7 @@ export default function SafariWindow(props: Props): JSX.Element {
 			<iframe
 				allow='autoplay; encrypted-media; picture-in-picture'
 				className='rounded-b-lg'
-				height='86.25%'
+				height='90%'
 				src={props.link}
 				width='100%'
 			/>
