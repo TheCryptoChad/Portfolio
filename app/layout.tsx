@@ -52,7 +52,6 @@ export const metadata: Metadata = {
 		images: 'https://www.thecryptochad.com/images/profile.webp',
 	},
 	robots: 'index, follow',
-	themeColor: '#000000',
 	icons: {
 		icon: '/favicon.ico',
 		apple: '/apple-touch-icon.png',
