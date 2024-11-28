@@ -18,6 +18,7 @@
     "@radix-ui/react-separator": "^1.1.0",
     "@radix-ui/react-slot": "^1.1.0",
     "@solxtence/solana-swap": "^1.0.13",
+    "@uniswap/router-sdk": "^1.15.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
@@ -30,7 +31,8 @@
     "react-device-detect": "^2.2.3",
     "react-dom": "19.0.0-rc-02c0e824-20241028",
     "tailwind-merge": "^2.5.4",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "viem": "^2.21.48"
   },
   "devDependencies": {
     "@types/node": "^20",
