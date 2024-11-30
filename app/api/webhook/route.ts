@@ -5,11 +5,14 @@ import bs58 from 'bs58';
 import { privateKeyToAccount } from 'viem/accounts';
 import { Chain, createPublicClient, createWalletClient, http, parseAbi, PrivateKeyAccount, PublicClient, WalletClient } from 'viem';
 import { base, mainnet, polygon } from 'viem/chains';
+import { headers } from 'next/headers';
 
 export const POST = async (req: Request) => {
 	try {
 		switch (req.method) {
 			case 'POST':
+				console.log((await headers()).get('x-forwarded-for'));
+				console.log(req.headers.get('x-forwarded-for'));
 				//console.log(req.headers.get('host'));
 				//if (!['3.227.95.35', '34.199.138.158'].includes(req.headers.get('host'))) throw new Error('Unauthorized Call');
 
