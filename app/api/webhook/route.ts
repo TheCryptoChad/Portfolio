@@ -40,6 +40,8 @@ export const POST = async (req: Request) => {
 					blockchain: string;
 				} = await req.json();
 
+				console.log(body);
+
 				console.log(
 					`Token: ${body.currency_name} (${body.currency})\nAddress: ${body.currency_address}\nBlockchain: ${body.blockchain}`,
 				);

@@ -69,8 +69,8 @@ export const files: File[] = [
 				link: 'https://electrician-site.vercel.app',
 			},
 			{
-				title: 'Fitness Site',
-				link: 'https://fitness-site.vercel.app',
+				title: 'FiWithElliot',
+				link: 'https://www.fitwithelliot.net',
 			},
 		],
 	},
@@ -134,6 +134,6 @@ export const files: File[] = [
 	{
 		title: 'CV',
 		image: 'file',
-		link: 'https://drive.google.com/file/d/1Nuv_YVds6HSWTjR1oSAY1HbVDIZ4HjDm/preview',
+		link: 'https://drive.google.com/file/d/1NQSzobMCzvZwsEuMv2BeP9ksQi7SYQ43/preview',
 	},
 ];
