@@ -16,7 +16,7 @@ import {
 	WalletClient,
 } from 'viem';
 import { privateKeyToAccount } from 'viem/accounts';
-import { mainnet } from 'viem/chains';
+import { base, mainnet } from 'viem/chains';
 
 export const POST = async (req: Request) => {
 	try {
@@ -57,6 +57,9 @@ export const POST = async (req: Request) => {
 						break;
 					case 'ethereum':
 						await buyTokenEVM(tokenAddress as `0x${string}`, 'ethereum');
+						break;
+					case 'base':
+						await buyTokenEVM(tokenAddress as `0x${string}`, 'base');
 						break;
 				}
 
@@ -106,6 +109,11 @@ const buyTokenEVM = async (tokenAddress: `0x${string}`, network: string) => {
 				chain: mainnet,
 				weth: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
 				uniswap: '0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D',
+			},
+			base: {
+				chain: base,
+				weth: '0x4200000000000000000000000000000000000006',
+				uniswap: '0x4752ba5dbc23f44d87826276bf6fd6b1c372ad24',
 			},
 		} as const;
 
